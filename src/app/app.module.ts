@@ -8,8 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { AppComponent } from './app.component';
+import { MaterialModules } from './app-material-modules';
 import { AppRoutingModule } from './app-routing.module';
-import { CommonMaterialModule } from './material-module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { InMemoryDataService }  from './in-memory-data.service';
 import { HeroesComponent } from './heroes/heroes.component';
@@ -32,7 +32,6 @@ import { MessagesComponent } from './messages/messages.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
-    CommonMaterialModule,
     FormsModule,
     HttpClientModule,
 
@@ -42,6 +41,7 @@ import { MessagesComponent } from './messages/messages.component';
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     ),
+    MaterialModules,
     //ReactiveFormsModule,
   ],
   providers: [],
